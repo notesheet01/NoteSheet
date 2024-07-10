@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+   }
+   
+body
+   {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       background: #c4b7a6;
+    }
+    
+.wrapper
+{
+    width: 520px;
+    margin-top: 10vh;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,2);
+    color: black;
+    backdrop-filter: blur;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    
+}
+
+header,footer{
+    position:fixed;
+    top:-20px;
+    left:-20px;
+    right:500px;
+    width: 100%;
+    margin: 20px;
+    padding:2px 5px;
+    background-color: rgb(117, 17, 17);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:99;
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+footer
+{
+    border-top: 3px solid white;
+    top:90%;
+    position: absolute;
+    padding: 20px 0;
+    font-size: 15px;
+}
+.Right a
+{
+    color: #fff;
+    margin-right: 55px;
+    text-decoration:none;
+}
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    max-width: 450px;
+    padding: 20px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    z-index: 1000;
+  }
+
+  .active-popup {
+    overflow: hidden;
+  }
+
+  .active-popup #loginForm {
+    filter: blur(10px);
+
+    background: rgba(0, 0, 0, 0.08);
+    transition: filter 0ms ease-in-out 0ms;
+  }
+  .active-popup #popup {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }

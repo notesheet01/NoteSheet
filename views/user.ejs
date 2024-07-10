@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link href="user.css" rel="stylesheet">
+  </head>
+  
+    
+  <body>
+    <header>
+        <img  src="logo-navbar.png">
+        <h2></h2> 
+            <nav class="navigation">
+            </nav>
+    </header>
+    <div class="wrapper">
+      <div id="loginForm">
+        <h1><%= Faculty.Empid %></h1>
+        <label for="FID" class="label">
+          <p class="para">Faculty ID<sup class="sup">*</sup></p>
+        </label>
+        <input
+          class=""
+          required
+          type="number"
+          name="FID"
+          id="FID"
+          placeholder="Enter Faculty ID"
+        />
+
+        <label for="faculty">
+          <p class="para">Faculty Name<sup class="sup">*</sup></p>
+        </label>
+        <input
+          class=""
+          required
+          type="text"
+          name="faculty"
+          id="faculty"
+          placeholder="Enter Faculty Name"
+        />
+
+        <label for="departmentId">
+          <p class="para">Department Id<sup class="sup">*</sup></p>
+        </label>
+        <input
+          class=""
+          required
+          type="number"
+          name="departmentId"
+          id="departmentId"
+          placeholder="Enter Department Id"
+        />
+
+        <label for="departmentName">
+          <p class="para">Faculty<sup class="sup">*</sup></p>
+        </label>
+        <input
+          class=""
+          required
+          type="text"
+          name="departmentName"
+          id="departmentName"
+          placeholder="Enter Department Name"
+        />
+
+        <div>
+          <button id="submitBtn" class="open-popup">Create NoteSheet</button>
+          <button id="submitBtn">View NoteSheet</button>
+        </div>
+      </div>
+      <div id="popup">
+        <button id="close-btn">X</button>
+        <h1>NoteSheet</h1>
+        <label for="subject">
+          <p class="para">Subject<sup class="sup">*</sup></p>
+        </label>
+        <input
+          class=""
+          required
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="Enter Subject"
+        />
+        <label for="detail">
+          <p class="para">Detail<sup class="sup">*</sup></p>
+        </label>
+        <textarea name="" id=""></textarea>
+      </div>
+    </div>
+    <footer>
+        <div class="foot">
+        <h3>&copy; All  Right Reserved by Student Software Development Cell</h3>
+        
+        </div>
+        <div class="Right">
+            <a href="https://miifoundation.com/">@miifoundation.com</a>
+        </div>
+
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const openPopupBtn = document.querySelector(".open-popup");
+          const closePopupBtn = document.querySelector("#close-btn");
+          const body = document.body;
+  
+          openPopupBtn.addEventListener("click", function () {
+            body.classList.add("active-popup");
+          });
+  
+          closePopupBtn.addEventListener("click", function () {
+            body.classList.remove("active-popup");
+          });
+        });
+      </script>
+  </body>
+</html>

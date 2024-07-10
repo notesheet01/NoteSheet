@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notsheet Manager</title>
+        <link rel="stylesheet" href="Dashboard.css">
+        <script src="https://kit.fontawesome.com/d95664049a.js"></script>
+    </head>
+
+    <body>
+		<h1>
+			<%=User.name%>
+		</h1>
+        <div class="wrapper">
+            <div class="sidebar"><img src="https://portal.medicaps.ac.in/AccSoft2/Parent_Script/img/medi1.jpg" alt="Medi-Caps University">
+                <ul >
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/createnotesheet" target="_self"><i class="fa-solid fa-plus"></i>Create Notsheet</a></li>
+                    <li><a href="/viewns" target="_self"><i class="fa-solid fa-magnifying-glass"></i>View Notsheet</a></li>
+                    <li><a href="/Approvens" target="_self"><i class="fa-solid fa-thumbs-up"></i>Approve Notesheets</a></li>
+					
+                </ul>
+            </div>
+            <div class="main_content">
+                <div class="header"><img src="https://www.medicaps.ac.in/resources/img/logo-navbar.png" alt="Medi-Caps University">
+                    <ul class="lists">
+						<div class="list">
+							<li>FACULTY NAME</li><span><%= Faculty.Empname %></span>
+						</div>
+						<div class="border"></div>
+						<div class="list">
+							<li >FACULTY ID </li><span><%= Faculty.Empid %></span>
+						</div>
+						<div class="border"></div>
+						<div class="list">
+							<li>DEPARTMENT</li><span>COMPUTER SCIENCE ENGINEERING</span>
+						</div>
+                    </ul>
+
+						<div class="profile dropdown ">
+						<img src="1486485581-account-audience-person-customer-profile-user_81164.svg" alt="profile">
+
+					<div class="caret select "></div>
+
+						<ul class="menu">
+							<div class="tail"></div>
+							<a href="#" ><li>View Profile</li></a>
+							<a href="#"><li>Change Password</li></a>
+							<a href="#"><li>Log out</li></a>
+						</ul>
+					</div>
+                </div>
+            </div>
+        </div>
+    </body>
+	<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+		const caret = dropdown.querySelector('.caret');
+        const dropdownMenu = document.querySelector('.dropdown .menu');
+
+        caret.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('menu-open');
+        });
+    });
+
+
+		const dropdowns = document.querySelectorAll(".dropdown");
+
+
+		dropdowns.forEach(dropdown => {
+			const caret = dropdown.querySelector('.caret');
+			const menu = dropdown.querySelector('.menu');
+			const lists = dropdown.querySelectorAll('.menu li'); // Use querySelectorAll to get all options
+
+			caret.addEventListener('click', () => {
+				caret.classList.toggle('caret-rotate');
+				menu.classList.toggle('menu-open');
+			});
+
+			lists.forEach(list => {
+				list.addEventListener('click', () => {
+					caret.classList.remove('caret-rotate');
+					menu.classList.remove('menu-open');
+				});
+			});
+		});
+	</script>
+
+    </html>

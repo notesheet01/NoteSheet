@@ -1,0 +1,20 @@
+{
+  "name": "backend6",
+  "version": "1.0.0",
+  "description": "NOTE SHEEET",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js"
+  },
+  "author": "Note Sheet",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.10.2"
+  }
+}

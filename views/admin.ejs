@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link href="admin.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img  src="logo-navbar.png">
+        <h2></h2> 
+            <nav class="navigation">
+            </nav>
+    </header>
+    <div class="wrapper">
+        
+        <h1>Create a user</h1>
+        <form method="post" action="/create">
+            <label for="Eid">Employee id</label>
+            <input type="text" id="Eid" name="username" placeholder="Enter value of id" >
+            <br>
+            <br>
+
+            <label for="Ename">Employee name</label>
+            <input type="text" id="Ename" name="Ename" placeholder="Enter value of name" >
+            <br>
+            <br>
+            
+            <label for="pass">Enter a new password</label>
+            <input type="password" id="pass" name="password" placeholder="Enter Password" >
+            <br>
+            <br>
+
+            <label for="passC">Enter a conform password</label>
+            <input type="password" id="passC" name="passwordC" placeholder="Enter Password" >
+            <br>
+            <br>
+            
+            <label for="Email">Email</label>
+            <input type="text" id="Email" name="email" placeholder="Enter value of Email" >
+            <br>
+            <br>
+
+            <label for="mobno">Mobile No</label>
+            <input type="text" id="mobno" name="mobno" placeholder="Enter Mobile Number" >
+            <br>
+            
+            <br>
+
+            <label for="Faculty">Faculty</label>
+            <select name="Faculty" id="Faculty">
+                    <option>Select</option>
+                    <option>Engineering</option>
+                    <option>Management</option>
+                    <option>Pharmacy</option>
+                    <option>Agriculture</option>
+                    <option>Arts and Humanities</option>
+                    <option>Law</option>
+                    <option>Commerce</option>
+                    <option>Science</option>
+
+            </select>
+            <br>
+            <br>
+
+            <label for="Dep">Department</label>
+            <select name="Dep" id="Dep">
+                <option>Select</option>
+                    <option>CE</option>
+                    <option>EC</option>
+                    <option>CSE</option>
+                    <option>NT</option>
+                    <option>RA</option>
+                    <option>ECE</option>
+                    <option>IT</option>
+                    <option>ME</option>
+                    <option>BBA</option>
+                    <option>MBA</option>
+                    <option>B.com</option>
+                    <option>M.com</option>
+                    <option>B.Sc Ag</option>
+                    <option>B.Sc CS</option>
+                    <option>B.Sc FS</option>
+                    <option>BCA</option>
+                    <option>MCA</option>
+                    <option>BA</option>
+                    <option>B.Pharma</option>
+                    <option>M.Pharma</option>               
+            </select>
+            <br>
+            <br>
+
+            <label for="Desg">Desgnition</label>
+            <select name="Desg" id="Desg">
+                    <option>Select</option>
+                    <option>HOD</option>
+                    <option>DEAN</option>
+                    <option>OSD</option>
+                    <option>Pro VC</option>
+                    <option>VC</option>
+                    <option>Assistant Professor</option>
+                    <option>Lecturer</option>
+                    <option>Associate Professor</option>
+                    <option>Professor</option>
+                    <option>Lab Technician</option>
+                    <option>Lab Assistant</option>
+            </select>
+            <br>
+            <br>
+            <div class="btn">
+                <button type="submit" class="btn">Create</button>
+            </div>
+            
+        </form>
+    </div>
+    <!-- <div class="activity">
+        <h1>Activity Status</h1>
+    </div> -->
+    <footer>
+        <div class="foot">
+        <h3>&copy; All  Right Reserved by Student Software Development Cell</h3>
+        
+        </div>
+        <div class="Right">
+            <a href="https://miifoundation.com/">@miifoundation.com</a>
+        </div>
+    </footer>
+    <!-- <script>
+        if(!message)
+        {
+            alert("Password doesnot match");
+        }
+    </script> -->
+</body>
+</html>

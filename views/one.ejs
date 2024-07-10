@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> HELLO WORLD !!</h1>
+    <table border="250">
+    <tr>
+        <th>Note id</th>
+        <th>SUBJECT</th>
+        <th>DETAILS</th>
+    </tr>
+
+
+            <% for(let i=0; i<2; i++) {  %>
+            <tr>
+                <td> <%= Notesheet[i].NOTEID  %> </td>
+                <td> <%= Notesheet[i].SUBJECT  %> </td>
+                <td> <%= Notesheet[i].DETAILS  %>  </td>
+            </tr>
+            <% } %>
+
+
+      
+            <!-- <% for(var i=0; i<2; i++) {  %>
+                <td>   <%= Notesheet[i].SUBJECT  %><</td>
+            <% } %>
+  
+      
+            <% for(var i=0; i<2; i++) {  %>
+            <td>   <%= Notesheet[i].DETAILS  %>  </td>
+            <% } %> -->
+       
+    </tr>
+</table>
+
+</body>
+</html>
