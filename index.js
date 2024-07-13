@@ -448,3 +448,82 @@ app.get("/approveNotesheet", async(req,res)=>{
         console.log(error);
     }
 })
+
+<---------------------my code ------------------------>
+
+// routes/approval.js
+const express = require('express');
+const router = express.Router();
+
+// Mock data for demonstration
+let notesheets = [
+    { id: 1, title: 'Notesheet 1', status: 'Pending' },
+    { id: 2, title: 'Notesheet 2', status: 'Approved' },
+];
+
+// GET route for the approval notesheet page
+router.get('/', (req, res) => {
+    res.render('approval', { notesheets });
+});
+
+// POST route for approving a notesheet
+router.post('/approve/:id', (req, res) => {
+    const { id } = req.params;
+    const notesheet = notesheets.find(ns => ns.id == id);
+
+    if (notesheet) {
+        notesheet.status = 'Approved';
+        res.redirect('/approval');
+    } else {
+        res.status(404).send('Notesheet not found');
+    }
+});
+
+module.exports = router;
+
+<--------------------------------------- 2nd ------------------------------------------>
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
+let notesheets = [];
+
+// Home route
+app.get('/', (req, res) => {
+    res.render('index', { notesheets });
+});
+
+// Add notesheet
+app.post('/add', (req, res) => {
+    const { title, status } = req.body;
+    notesheets.push({ title, status });
+    res.redirect('/');
+});
+
+// Update status
+app.post('/update/:index', (req, res) => {
+    const { status } = req.body;
+    const index = req.params.index;
+    if (notesheets[index]) {
+        notesheets[index].status = status;
+    }
+    res.redirect('/');
+});
+
+// Delete notesheet
+app.post('/delete/:index', (req, res) => {
+    const index = req.params.index;
+    if (notesheets[index]) {
+        notesheets.splice(index, 1);
+    }
+    res.redirect('/');
+});
+
+app.listen(PORT, () => {
+    console.log(Server is running on http://localhost:${PORT});
+});
