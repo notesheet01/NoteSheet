@@ -152,6 +152,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 });
+	// js copy paste//
+	
+	menu.addEventListener('click',()=>{
+	sidebar.classList.toggle('block');
+
+})
+icon.addEventListener('click',()=>{
+
+
+	if(icon.classList.contains('fa-xmark')){
+		icon.classList.remove('fa-xmark');
+	icon.classList.add('fa-bars');
+	icon.classList.toggle('rotate');
+}else{
+
+	icon.classList.toggle('rotate');
+		icon.classList.remove('fa-bars');
+		icon.classList.add('fa-xmark');
+
+	}
+
+
+});
 
 </script>
 
