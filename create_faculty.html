@@ -11,7 +11,9 @@
 
 <body>
 	<div class="wrapper">
-		
+        <div class="toggler">
+            <i id="icon" class="menu-btn fa-solid fa-bars"></i>
+            </div>
         <div class="wrapperImg">
 
             <img  src="https://portal.medicaps.ac.in/AccSoft2/Parent_Script/img/medi1.jpg" alt="Medi-Caps University">
@@ -98,8 +100,9 @@
 </body>
 <script>
 
-document.addEventListener('DOMContentLoaded', () => {
-
+const sidebar = document.querySelector(".sidebar");
+const icon = document.getElementById('icon');
+const menuicon = document.querySelector('.menu-btn');
     const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(dropdown => {
@@ -149,8 +152,28 @@ document.addEventListener('DOMContentLoaded', () => {
         profileMenu.classList.remove('menu-open');
     }
 });
-});
-	// js copy paste//
-	
-	
+menuicon.addEventListener('click',()=>{
+	sidebar.classList.toggle('block');
+
+})
+icon.addEventListener('click',()=>{
+
+
+	if(icon.classList.contains('fa-xmark')){
+		icon.classList.remove('fa-xmark');
+	icon.classList.add('fa-bars');
+	icon.classList.toggle('rotate');
+}else{
+
+	icon.classList.toggle('rotate');
+		icon.classList.remove('fa-bars');
+		icon.classList.add('fa-xmark');
+
+	}
+
+
+})
+
+</script>
+
 </html>
