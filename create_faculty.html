@@ -11,9 +11,7 @@
 
 <body>
 	<div class="wrapper">
-		  <div class="toggler">
-                <button class="menu-btn"><i id="icon" class="fa-solid fa-bars"></i></button>
-            </div>
+		
         <div class="wrapperImg">
 
             <img  src="https://portal.medicaps.ac.in/AccSoft2/Parent_Script/img/medi1.jpg" alt="Medi-Caps University">
@@ -154,28 +152,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 	// js copy paste//
 	
-	menu.addEventListener('click',()=>{
-	sidebar.classList.toggle('block');
-
-})
-icon.addEventListener('click',()=>{
-
-
-	if(icon.classList.contains('fa-xmark')){
-		icon.classList.remove('fa-xmark');
-	icon.classList.add('fa-bars');
-	icon.classList.toggle('rotate');
-}else{
-
-	icon.classList.toggle('rotate');
-		icon.classList.remove('fa-bars');
-		icon.classList.add('fa-xmark');
-
-	}
-
-
-});
-
-</script>
-
+	
 </html>
