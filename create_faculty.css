@@ -100,7 +100,7 @@ position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 150px;
+    margin-left: 140px;
     position: fixed;
     height: 110px;
     border-bottom: 2px black;
@@ -307,23 +307,58 @@ margin-left: 10px;
    font-weight: bold;
    font-size:1.5em;    
 }
+.rotate{
+	transition: all 0.5s;
+	transform: rotate(360deg);
+	z-index: 9;
+}
+
 .toggler{
+
 	display: flex;
 
 	align-items: center;
+
+
 }
-.block{
+.sidebar.block{
 	display: block;
 }
-
+@media only screen and (max-width: 1200px) {
+	.create_user {
+		
+		padding-left: 25%;
+	}
+	.create_user .box{
+	
+		width: 85%;
+	}
+    .create_user form {
+        padding-top: 60px;
+        padding-left: 58px;
+    }
+}
 @media only screen and (max-width: 858px) {
+	.create_user {
+		margin-top: 10%;
+		padding-left: 20%;
+	}
+	.create_user .box{
+		
+		width: 95%;
+		padding: 20px 10px;
+	}
+
 	.wrapper .sidebar ul li {
 
 		padding: 12px 9px;
 
 	}
+    .create_user form {
+        padding-left: 15px;
+    }
 	.wrapper .sidebar {
-
+margin-top: 14%;
 		width: 117px;
 
 	}
@@ -331,6 +366,7 @@ margin-left: 10px;
 		margin-left: 13px;
 	}
 	.toggler{
+		position: fixed;
 padding: 1rem;
 		background-color: #ffffff;
 		height: 110px;
@@ -344,7 +380,10 @@ padding: 1rem;
 		overflow-y: scroll;
 		transition: all 0.5s;
 	}
+.wrapper .wrapperImg{
+	display: none;
 
+}
 	.header{
 		margin-left: 0;
 		width: 100%;
@@ -378,27 +417,75 @@ padding: 1rem;
 }
 
 @media only screen and (max-width: 668px){
-
+	.nav-menu{
+		top: 3.6rem;
+		left: 6rem;
+	}
+	
+	.create_user {
+     
+        padding-left: 30%;
+		}
+		.create_user .box{
+			border-radius: 1rem;
+			height: 715px;
+			width: 95%;
+			padding: 20px 10px;
+		}
 	.sidebar-border {
 		margin-left: 13px;
 	}
     .header img{
-        width: 225px;
+        width: 270px;
         height: 60px;
-    }
-    .profile{
-        position: sticky;
-        margin-left: 0px;
-		right: 5px;
 
+	margin-left: 3rem;
     }
+    .profile img{
+        position: sticky;
+		margin-right: 1rem;
+    }
+
     .nav-ul{
         display: none;
+
     }
 	.wrapper .sidebar {
-
+		margin-top: 22%;
 		width: 117px;
 
 	}
+	.btn{
+		margin-left: 42%;
+	}
 }
 
+@media only screen and (max-width: 480px) {
+	.sidebar-border {
+		margin-left: 2px;
+	}
+	.header img {
+        width: 134px;
+        height: 43px;
+    }
+
+	.profile{
+		right: 0px;
+	}
+
+	.nav-menu{
+		width: 120px;
+		height: 140px;
+		font-size: 0.8rem;
+	}
+	.wrapper .sidebar {
+		width: 90px;
+		margin-top: 27%;
+	}
+	.btn{
+		margin-left: 20%;
+	}
+	.wrapper .sidebar ul li a{
+		font-size: small;
+	}
+}
