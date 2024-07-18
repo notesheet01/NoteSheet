@@ -232,6 +232,7 @@ top: 34px;
 	border-spacing:0;
 	box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
 	border:1px solid black;
+	overflow-y:auto;
 	
 }
 .view_form .box table,td,th{
