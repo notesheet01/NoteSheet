@@ -402,27 +402,3 @@ padding: 1rem;
 	}
 }
 
-@media only screen and (max-width: 480px) {
-	.sidebar-border {
-		margin-left: 13px;
-	}
-	.header img {
-        width: 134px;
-        height: 43px;
-    }
-
-	.profile{
-		right: 0px;
-	}
-
-	.nav-menu{
-		width: 120px;
-		height: 140px;
-		font-size: 0.8rem;
-	}
-	.wrapper .sidebar {
-
-		width: 117px;
-
-	}
-}
