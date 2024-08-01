@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notsheet Manager</title>
     <link rel="stylesheet" href="create_dep.css">
-    <link rel="stylesheet" href="Admin_Panel.css">
+   
     <script src="https://kit.fontawesome.com/d95664049a.js"></script>
 </head>
 
 <body>
 	<div class="wrapper">
+        <div class="toggler">
+            <i id="icon" class="menu-btn fa-solid fa-bars"></i>
+            </div>
         <div class="wrapperImg">
 
             <img  src="https://portal.medicaps.ac.in/AccSoft2/Parent_Script/img/medi1.jpg" alt="Medi-Caps University">
@@ -21,9 +24,7 @@
                 <div class="sidebar-border"></div>
 				<li><a href="Createuser.html" target="_self">CREATE USER</a></li>
                 <div class="sidebar-border"></div>
-				<li><a href="Edit_notesheet.html" target="_self">EDIT NOTESHEET</a></li> 
-                <div class="sidebar-border"></div>
-                <li><a href="View.html" target="_self">VIEW NOTESHEET</a></li>
+				<li><a href="View.html" target="_self">VIEW NOTESHEET</a></li>
                 <div class="sidebar-border"></div>
 			    <li><a href="create_faculty.html">CREATE FACULTY</a></li>
                 <div class="sidebar-border"></div>
@@ -66,24 +67,22 @@
 				</div>
 			</div>
 		</div>
-	</div>
 
-
-    <div class="create_user">
+<div class="create_user">
         <form action=" ">
             <h2>CREATE DEPARTMENT</h2>
             <div class="box">
 				<div class="fid">
 					<label class="id">FACULTY ID:</label>
-					<input name="id" type="text" id="id" ></input>
+					<input name="id" type="text" id="id" >
 	            </div>
             <div class="did">
                     <label class="id" >DEPARTMENT ID :</label>
-                    <input name="id" type="id" id="id" ></input>
+                    <input name="id" type="id" id="id" >
                 </div>
                 <div class="fname">
                 <label class="name" >DEPARTMENT NAME :</label>
-                <input name="name" type="text" id="name" ></input>
+                <input name="name" type="text" id="name" >
             </div>
 
 			<div class="name">
@@ -100,7 +99,9 @@
 </body>
 <script>
 
-document.addEventListener('DOMContentLoaded', () => {
+const sidebar = document.querySelector(".sidebar");
+const icon = document.getElementById('icon');
+const menuicon = document.querySelector('.menu-btn');
 
     const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -151,7 +152,28 @@ document.addEventListener('DOMContentLoaded', () => {
         profileMenu.classList.remove('menu-open');
     }
 });
-});
+menuicon.addEventListener('click',()=>{
+	sidebar.classList.toggle('block');
+
+})
+icon.addEventListener('click',()=>{
+
+
+	if(icon.classList.contains('fa-xmark')){
+		icon.classList.remove('fa-xmark');
+	icon.classList.add('fa-bars');
+	icon.classList.toggle('rotate');
+}else{
+
+	icon.classList.toggle('rotate');
+		icon.classList.remove('fa-bars');
+		icon.classList.add('fa-xmark');
+
+	}
+
+
+})
+
 
 </script>
 
